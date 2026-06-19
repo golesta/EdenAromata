@@ -32,29 +32,29 @@ const NEEDS = [
 export function ShopByNeed() {
   return (
     <section className="need" id="need">
-      <div className="wrap" style={{ paddingTop: "90px" }}>
+      <div className="wrap" style={{ paddingTop: "90px", paddingBottom: "90px" }}>
         <div className="sec-head rv">
           <h2 className="serif">Shop by <em>how you want to feel</em></h2>
           <p>Tell us your goal — we&apos;ll point you to the right formulation.</p>
         </div>
-      </div>
-      <div className="need-grid">
-        {NEEDS.map((item) => (
-          <div
-            className="ncard rv"
-            key={item.n}
-            style={
-              { "--symr": item.symr, "--symrot": item.symrot } as React.CSSProperties
-            }
-          >
-            <span className="n">{item.n}</span>
-            <div className="sym">
-              <i />
+        <div className="need-grid">
+          {NEEDS.map((item) => (
+            <div
+              className="ncard rv"
+              key={item.n}
+              style={
+                { "--symr": item.symr, "--symrot": item.symrot } as React.CSSProperties
+              }
+            >
+              <span className="n">{item.n}</span>
+              <div className="sym">
+                <i />
+              </div>
+              <h4 className="serif">{item.title}</h4>
+              <p>{item.desc}</p>
             </div>
-            <h4 className="serif">{item.title}</h4>
-            <p>{item.desc}</p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

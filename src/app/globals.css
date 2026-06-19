@@ -553,6 +553,9 @@ section.blk {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  overflow: hidden;
 }
 
 .ncard {
